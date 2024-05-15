@@ -9,7 +9,7 @@ import ProductsFavourite from "./favourites/page";
 
 const Home = () => {
   return (
-    <div className=" w-full max-w-7xl mx-auto flex-col container">
+    <div className=" w-full max-w-7xl mx-auto flex-col pt-[85px] container">
       <div className="flex items-center mb-[40px] justify-between">
         <span className="flex font-semibold text-sm text-gray-300">
           Smartfonlar va gadjetlar

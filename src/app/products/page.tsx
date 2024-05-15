@@ -12,7 +12,12 @@ const Products = () => {
     fetchProducts();
   }, []);
   return (
-    <div className="flex container max-w-7xl mx-auto  wrap">
+    <div className="flex container max-w-7xl mx-auto pt-[85px] flex-col">
+      <div className="flex items-center mb-[30px] gap-3">
+          <span className="text-[22px] font-semibold ">
+            Mahsulotlar 🔥🔥🔥
+          </span>
+        </div>
       {loading && <Loading />}
       {error && <h1>{error}</h1>}
       {products.length > 0 ? (
