@@ -18,9 +18,11 @@ const productStore = (set: any) => ({
     }
   },
   fetchSecondy: async () => {
-    // set({ loading: true });
     try {
-      const response = await fetch("https://dummyjson.com/products");
+      const limit = 5; // Limitni belgilash
+      const response = await fetch(
+        `https://dummyjson.com/products?limit=${limit}`
+      ); // URL manzilini limit parametri bilan yaratish
       const data = await response.json();
       set({ products: data.products });
     } catch (err) {
