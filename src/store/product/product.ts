@@ -17,6 +17,18 @@ const productStore = (set: any) => ({
       set({ loading: false });
     }
   },
+  fetchSecondy: async () => {
+    // set({ loading: true });
+    try {
+      const response = await fetch("https://dummyjson.com/products");
+      const data = await response.json();
+      set({ products: data.products });
+    } catch (err) {
+      set({ error: (err as Error).message });
+    } finally {
+      set({ loading: false });
+    }
+  },
 });
 
 const useProductStore = create(productStore);
