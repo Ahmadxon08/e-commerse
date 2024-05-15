@@ -1,4 +1,5 @@
 import ThemeSwitch from "@/components/darkMode/Theme-dark";
+import Link from "next/link";
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
@@ -8,7 +9,8 @@ const Header = () => {
   return (
     <div className=" flex container max-w-7xl h-[76px] gap-8 items-center justify-between px-5 mx-auto">
       <div className="flex items-center gap-2 ">
-        <h1 className="flex text-[32px] font-bold">Logo</h1>
+      <Link href="/">
+      <h1 className="flex text-[32px] font-bold">Logo</h1></Link>
         <div className="flex items-center rounded-md px-2 gap-2 bg-green-400 w-[186px] h-[44px]">
           <button>
             <IoMdMenu size={32} color="white" />

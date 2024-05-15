@@ -10,6 +10,7 @@ export type ProductType = {
   category: string;
   thumbnail: string;
   images: string[] | string;
+  image: string
 };
 
 export type ProductStoreType = {

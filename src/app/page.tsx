@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import ProductHome from "./home/page";
+import ProductsFavourite from "./favourites/page";
 // import { Link } from 'next/link';
 
 const Home = () => {
@@ -49,8 +50,13 @@ const Home = () => {
             Hammasini ko'rish <FaChevronRight size={18} />
           </Link>
         </div>
-        <ProductHome/>
-
+        <ProductHome />
+        <div className="flex items-center mb-[30px] gap-3">
+          <span className="text-[22px] font-semibold">
+            Sizni qiziqtirishi mumkin
+          </span>
+        </div>
+        <ProductsFavourite />
       </div>
     </div>
   );

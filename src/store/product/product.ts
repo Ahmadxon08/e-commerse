@@ -31,6 +31,20 @@ const productStore = (set: any) => ({
       set({ loading: false });
     }
   },
+  fetchThird: async () => {
+    try {
+      // const limit = 5; // Limitni belgilash
+      const response = await fetch("https://fakestoreapi.com/products");
+      const data = await response.json();
+      console.log(data);
+
+      set({ products: data });
+    } catch (err) {
+      set({ error: (err as Error).message });
+    } finally {
+      set({ loading: false });
+    }
+  },
 });
 
 const useProductStore = create(productStore);
