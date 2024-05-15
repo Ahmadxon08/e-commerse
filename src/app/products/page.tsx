@@ -18,6 +18,10 @@ const Products = () => {
             Mahsulotlar 🔥🔥🔥
           </span>
         </div>
+
+
+
+        
       {loading && <Loading />}
       {error && <h1>{error}</h1>}
       {products.length > 0 ? (
