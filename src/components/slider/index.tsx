@@ -5,10 +5,10 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const laptop = "./assets/laptop.png";
-const ph = "./assets/ph.png";
+// const laptop = "./assets/laptop.png";
+// const ph = "./assets/ph.png";
 const samsung = "./assets/samsung.png";
-const tv = "./assets/tv.png";
+// const tv = "./assets/tv.png";
 const watch = "./assets/watch.png";
 import "./index.css";
 
