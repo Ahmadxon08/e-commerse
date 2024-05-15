@@ -15,7 +15,7 @@ const Header = () => {
       >
         <div className="flex items-center gap-2 ">
           <Link href="/" className="w-[32] h-[32]">
-            <h1 className="flex text-[22px] font-bold">Ali shop</h1>
+            <h1 className="flex text-[22px] text-black font-bold">Ali shop</h1>
             {/* <img src={logo} alt="this is Logo" className="w-full h-[72px]"  /> */}
           </Link>
           <div className="flex items-center rounded-md px-2 gap-2 bg-green-400 w-[186px] h-[44px]">
@@ -37,15 +37,15 @@ const Header = () => {
         </div>
         <div className="flex justify-between items-center gap-6 ">
           <div className="flex flex-col items-center">
-            <MdOutlineShoppingCart size={28} />
-            <span className="flex text">Savat</span>
+            <MdOutlineShoppingCart size={28}  color="black"/>
+            <span className="flex text-black">Savat</span>
           </div>
           <div className="flex flex-col items-center">
-            <MdFavoriteBorder size={28} />
-            <span className="flex text">Saralanganlar</span>
+            <MdFavoriteBorder size={28} color="black" />
+            <span className="flex text-black">Saralanganlar</span>
           </div>
           <div className="flex flex-col items-center">
-            <button className=" rounded-md border-green-400 border-2  h-[44px] w-[76px]">
+            <button className=" rounded-md border-green-400 border-2 text-black  h-[44px] w-[76px]">
               Kirish
             </button>
           </div>

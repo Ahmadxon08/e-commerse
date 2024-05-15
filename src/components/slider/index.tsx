@@ -31,7 +31,7 @@ export default function SimpleSlider() {
         <img
           src="https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
           alt="laptop"
-          className="w-[400px] h-[400px]"
+          className="w-[400px] bg-inherit h-[400px]"
         />
       </div>
       <div className="flex card justify-between items-center">
