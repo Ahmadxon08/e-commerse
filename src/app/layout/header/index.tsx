@@ -36,10 +36,10 @@ const Header = () => {
           <IoSearch size={32} color="white" />
         </div>
         <div className="flex justify-between items-center gap-6 ">
-          <div className="flex flex-col items-center">
+          <Link href={'/cart'} className="flex flex-col items-center">
             <MdOutlineShoppingCart size={28}  color="black"/>
             <span className="flex text-black">Savat</span>
-          </div>
+          </Link>
           <div className="flex flex-col items-center">
             <MdFavoriteBorder size={28} color="black" />
             <span className="flex text-black">Saralanganlar</span>

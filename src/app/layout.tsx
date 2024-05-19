@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./layout/header";
 import Footer from "./layout/footer";
 import { Providers } from "./Providers";
+import GlobalContext from "@/app/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
+        <GlobalContext>
+          <Providers>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </Providers>
+        </GlobalContext>
       </body>
     </html>
   );

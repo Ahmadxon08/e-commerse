@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
+import { CartContext } from "@/app/context";
 import { ProductType } from "@/types/product.type";
-import React from "react";
+import React, { useContext } from "react";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 
 const ProductCard = ({ product }: { product: ProductType }) => {
+  const {handleAddToCart}=useContext(CartContext)
   return (
     <div className="flex flex-col w-[228px] h-[313px] border rounded-xl border-gray-100 ">
       <div className="flex items-center pl-[30px] w-full relative py-3 rounded-xl bg-gray-100">
@@ -26,7 +29,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 
         {(product.price - (product.price * product.discountPercentage)/100).toFixed(2)}$
       </p>
-      <button className="bg-yellow-500 mt-1 w-[130px] py-1 px-1 rounded-md gap-3 flex items-center justify-center font-semibold text-black">
+      <button onClick={()=>handleAddToCart(product)} className="bg-yellow-500 mt-1 w-[130px] py-1 px-1 rounded-md gap-3 flex items-center justify-center font-semibold text-black">
       <MdOutlineShoppingCart color="black" size={22} />
       Savatga
       </button>
