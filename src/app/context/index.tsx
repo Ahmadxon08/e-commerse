@@ -1,5 +1,5 @@
 // import { CartStoreType, CartType } from "@/types/cart.type";
-'use client'
+"use client";
 
 import { CartStoreType, CartType } from "@/types/cart.type";
 import { createContext, useState } from "react";
@@ -16,17 +16,20 @@ const GlobalContext = ({ children }: GlobalContextProps) => {
   const handleAddToCart = (item: CartType) => {
     setCart((prevCart) => [...prevCart, item]);
     console.log("Item added to cart:", item);
-    console.log("Cart items:", cartItems); 
+    console.log("Cart items:", cartItems);
   };
-  
-  
+
   const handleRemoveFromCart = (id: number) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     console.log("Item removed from cart:", id);
   };
 
+
+  
   return (
-    <CartContext.Provider value={{ cartItems, handleRemoveFromCart, handleAddToCart }}>
+    <CartContext.Provider
+      value={{ cartItems, handleRemoveFromCart, handleAddToCart }}
+    >
       {children}
     </CartContext.Provider>
   );
