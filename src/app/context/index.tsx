@@ -19,13 +19,13 @@ const GlobalContext = ({ children }: GlobalContextProps) => {
     console.log("Cart items:", cartItems);
   };
 
-  const handleRemoveFromCart = (id: number) => {
+  
+
+  const handleRemoveFromCart = (id: CartType | number) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     console.log("Item removed from cart:", id);
   };
 
-
-  
   return (
     <CartContext.Provider
       value={{ cartItems, handleRemoveFromCart, handleAddToCart }}
